@@ -28,8 +28,10 @@ public class CoinTask extends TimerTask {
         }
         System.out.println("----------------");
         System.out.println("Total € invested: " + totalInvested + "€");
-        System.out.println("----------------");
-        System.out.println("Total Fees payed: " + api.round(totalFees, 2) + "€");
+        if(CoinCalc.SUB_COINBASE_FEES) {
+            System.out.println("----------------");
+            System.out.println("Total Fees payed: " + api.round(totalFees, 2) + "€");
+        }
         System.out.println("----------------");
         System.out.println("Total Return for all Coins " + api.round(totalReturnEuro, 2) + "€");
 

@@ -2,10 +2,6 @@ package de.dumpeldown.coincalc;
 
 import org.json.JSONObject;
 
-import java.io.*;
-import java.net.URL;
-import java.nio.charset.Charset;
-
 public class Coin {
     public static double EXCHANGE_RATE;
     String sym;
@@ -19,8 +15,13 @@ public class Coin {
         this.sym = sym;
         this.amountBoughtEuro = amountBought;
         this.boughtAt = boughtAt;
-        this.fee = amountBought - subFee(amountBought);
-        this.amountBoughtCoin = subFee(amountBought) / boughtAt;
+        if (CoinCalc.SUB_COINBASE_FEES) {
+            this.fee = amountBought - subFee(amountBought);
+            this.amountBoughtCoin = subFee(amountBought) / boughtAt;
+        } else {
+            this.fee = 0;
+            this.amountBoughtCoin = amountBought/boughtAt;
+        }
     }
 
     private double subFee(double amountBought) {
