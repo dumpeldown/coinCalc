@@ -1,5 +1,5 @@
 # coinCalc
-Calculate the return of investment of your crypto.
+## Calculate the return of investment of your crypto.
 
 ## Use Case
 This command-line-tool can be used to monitor the value of crypto-currencies.    
