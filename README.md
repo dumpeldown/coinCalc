@@ -1,10 +1,11 @@
 # coinCalc
+## Calculate the return of investment of your crypto.
 
 ## Use Case
 This command-line-tool can be used to monitor the value of crypto-currencies.    
 In regular intervals - default is 3 minutes - the new prices will be fetch using the [crypto-compare API](https://min-api.cryptocompare.com/).   
 
-We also support automatically subtracting the fees you payed, when using [coinbase](https://www.coinbase.com/). Maybe in the future, we will support other exchange-platforms' fee systems.
+We also support automatically subtracting the fees you payed, when using [coinbase](https://help.coinbase.com/en/coinbase/trading-and-funding/pricing-and-fees/fees). Maybe in the future, we will support other exchange-platforms' fee systems.
 
 ## How to use
 Build the project using the [Apache-Maven build system](https://maven.apache.org/).
