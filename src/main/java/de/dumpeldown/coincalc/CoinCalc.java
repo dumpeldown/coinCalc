@@ -82,11 +82,11 @@ public class CoinCalc {
         File outputFile = new File(this.outputFile);
         try {
             int infront = (int) ret;
-            int after = (int) (round(ret, 2) * 100) % 100;
+            int after = (int) Math.abs((round(ret, 2) * 100) % 100);
             if (after < 10) {
-                value = infront + ".0" + after;
+                value = infront + ",0" + after;
             } else {
-                value = infront + "." + after;
+                value = infront + "," + after;
             }
             fw = new FileWriter(this.outputFile, true);
             bw = new BufferedWriter(fw);

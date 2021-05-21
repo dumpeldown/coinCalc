@@ -31,7 +31,8 @@ public class Coin {
         if (amountUSD <= 25) return (amountBought - 1.49);
         if (amountUSD <= 50) return (amountBought - 1.99);
         if (amountUSD <= 200) return (amountBought - 2.99);
-        return -1;
+        //all other undefined values
+        return (amountBought - 2.99);
     }
 
     public String stringify() {
@@ -40,8 +41,10 @@ public class Coin {
     }
 
     private double getExchangeRate() {
+        String api_key = System.getenv("exchangerates_api_key");
         ResponseHelper responseHelper = new ResponseHelper();
-        String URL = "https://api.exchangeratesapi.io/latest";
+        // umgebungsvariable key=exchangerates_api_key
+        String URL = "http://api.exchangeratesapi.io/v1/latest?access_key="+api_key;
         JSONObject response = responseHelper.getResponse(URL);
         double rate = response.getJSONObject("rates").getDouble("USD");
         System.out.println("--------------EXCHANGE RATE-------------------");
