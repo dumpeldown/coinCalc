@@ -54,4 +54,4 @@ See the examples below
 ### Example Usage
 
 Use the `./run.sh` command to spawn a background process which will write to the `output.csv` file. You can keep track of the changes written to the file using the `tail -f output.csv` command.
-Executing the `./stop.sh` command will stop every process containing the command specified behind the first grep statement. See the stop.sh file [here.] (https://github.com/dumpeldown/coinCalc/blob/main/stop.sh).
+Executing the `./stop.sh` command will stop every process containing the command specified behind the first grep statement. See the stop.sh file [here.](https://github.com/dumpeldown/coinCalc/blob/main/stop.sh).
