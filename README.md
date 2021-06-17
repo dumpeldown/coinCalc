@@ -51,3 +51,7 @@ See the examples below
 > java -jar target/coinCalc-${VERSION}.jar -freq 10 -coinbase
 > java -jar target/coinCalc-${VERSION}.jar -coinbase -freq 10
 ````
+### Example Usage
+
+Use the `./run.sh` command to spawn a background process which will write to the `output.csv` file. You can keep track of the changes written to the file using the `tail -f output.csv` command.
+Executing the `./stop.sh` command will stop every process containing the command specified behind the first grep statement. See the stop.sh file [here]8https://github.com/dumpeldown/coinCalc/blob/main/stop.sh).
